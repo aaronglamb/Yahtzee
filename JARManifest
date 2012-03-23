@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+<title>Practice</title>
+<script type="text/javascript">
+(function() {
+    alert("Message");
+})();
+</script>
+</head>
+
+<body>
+</body>
+
+</html>
