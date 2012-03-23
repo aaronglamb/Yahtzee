@@ -1,0 +1,73 @@
+This is the final project for CSE 331 - Software Development at the University of Washington
+
+I've been undertaking the entire BS in Software Engineering course load on my own. The biggest hurdle to this project was the scope: as a group project it was considerably larger than anything I'd done prior, and I don't have a group to work with.  However, I'm able to say I completed it, and beyond (for the most part) the requirements of the assignment.  From the spec:
+
+
+Your Implementation:
+
+A Swing/AWT graphical interface (GUI)
+Two-player mode with two human players or one human versus one computer player
+At least four specific computer player strategies
+The basic game play and ability to select and roll dice, then assign a given hand of dice into one of the thirteen categories
+Keeping score properly for each of the two players using the score rules previously described
+Determining who won each game and indicating this to the user
+Allowing ultiple games to be played and storing a cumulative score for each player, separate from that player's score for the current game
+
+
+Graphical User Interface and Views:
+
+The overall window size should be appropriate to show the state of the game
+The window title should be an appropriate message indicating that this is a Yahtzee game for CSE 331
+The window should appear in the center of the screen when if first loads
+When the main window closes, the program should exit
+Your GUI should support at least two views: one "component view" and one "painted view"
+At least one view should display the model primarily using existing Java components such as buttons, labels, text fields, combo boxes, and so on
+The set of graphical components chosen for said view should be non-trivial, such as using several different components and having them respond to various events intelligently.  You must use at least two (2) graphical components that were not used in any of the previous homework assignments
+At least one control button on the screen should use an icon of your own choosing. 
+Both views must represent all major aspects of the current state of the application, including the current dice, each player's score card and total points earned so far, and who is winning (or wins) the game.
+The views and GUI should enable and disable various components such that the user is prevented from giving invalid input to the system and is prevented from interacting with components that are not presently relevant.
+Both views do need to be able to hands resizing gracefully for a reasonable range of window sizes.
+Regarding the two additional components, I used a JSlider component, and a JOptionPane with a JComboBox input component, both of which I had never used.  Regarding the use of icons on control buttons, my dice use icons.
+Note: I chose not to implement the multiple view portion of the assignment and instead stayed with a single component view. My reasoning is this: a second view is a relatively small portion of the project, but at this point is a major task to implement. In addition, if I were truly working with a group here, then I would assume the other 3 to 4 members could sufficiently implement a second (and probably a third, for an addition point) view with relative ease in the amount of time it's taken me to do the rest of the game. Because of this I'm reconciled with this project, and finally this course, and feel that I've done sufficient and quality work.
+Because of this, the following criteria I deemed not-applicable:
+
+At least one view should draw the model primarily using 2D graphics and painting
+Your 2D graphics should be non-trivial, such as using many colors/paints, gradients, shapes, stroke thicknesses, images, anti-aliasing, and/or other features shown in class.
+Your 2D graphics should draw any onscreen shapes by creating shape objects rather than using the procedural drawing methods such as drawRect and fillOval
+Your 2D graphical view must respond to clicks on the various game board squares using mouse events.
+
+
+Strategies (see documentation for specific strategy algorithm descriptions):
+Random
+Of-A-Kinder
+Upper-Sectioner
+Four-and-Up
+
+Design Constraints:
+
+The source code of your project should meet the following design constraints:
+
+1. At least one class from your model must use Observable object.
+Most all of my view objects Observe both the Dice object and the Game object.
+2. Your computer play algorithms must implement the Strategy pattern as taught in class.
+They do.
+3. You must use at least three other patterns in your solution.
+In addition to the Strategy pattern, I'm using:
+a) the Singleton pattern (Dice and Game)
+b) the State pattern (Status and DiceStatus)
+c) the Iterator pattern (ScoreCard)
+4. Make at least one class in your system immutable.
+Fine.  The PlayerIdentity class is immutable.
+5. Organize the classes in your program into packages.
+I used the view packange and the model package.
+
+Extra Features:
+
+You game should include at least two extra features.  If you complete more than one extra feature, each additional one you implement properly will earn you +1 extra point.
+
+I implemented the following extra features:
+Bonus scores for multiple Yahtzee in a game
+Two computer player mode
+Up to 4 players mode (my game can actually accomodate unlimited players)
+Animation
+JAR archive 
